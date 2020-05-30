@@ -1,0 +1,188 @@
+/* ============= 
+General settings
+============= */
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  min-height: 100%;
+  padding-top: 10em;
+  background-color: hsl(0, 0%, 89%);
+  color: #353535;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  color: hsl(234, 55%, 58%);
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.container {
+  width: min(90%, 600px);
+  margin: 0 auto;
+  margin-bottom: 10em;
+  background-color: rgba(255, 255, 255, 1);
+
+  padding: 2.5em;
+
+  border-radius: 15px;
+  box-shadow: -5px 5px 10px rgba(170, 126, 126, 0.5);
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    to bottom left,
+    hsl(45, 90%, 65%) 0%,
+    hsl(45, 100%, 50%) 100%
+  );
+  /* border-radius: 100%; */
+  width: 300px;
+  height: 300px;
+  top: -90px;
+  left: -100px;
+  rotate: 20deg;
+  z-index: -20;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+
+  right: -150px;
+  bottom: -120px;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(
+    to top left,
+    hsl(357, 64%, 65%) 0%,
+    hsl(357, 67%, 55%) 100%
+  );
+  border-radius: 100%;
+  z-index: -20;
+}
+
+label {
+  display: block;
+  margin: 1.5em 0;
+  font-weight: 400;
+}
+
+input[type="text"] {
+  padding: 1em;
+  font-family: inherit;
+  border-radius: 5px;
+  width: 50%;
+  border: 1px solid hsl(0, 0%, 70%);
+}
+
+input[type="text"]:focus {
+  border-top: 3px solid hsl(357, 64%, 65%);
+}
+
+hr {
+  border: 1px transparent;
+  margin: 5em;
+}
+
+#tipOutput {
+  display: inline-block;
+  margin-left: 1em;
+}
+#tipPerP,
+#newBill {
+  color: hsl(234, 55%, 58%);
+  font-weight: 700;
+}
+
+/* Special styling for WebKit/Blink */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid hsl(357, 64%, 65%);
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: hsl(357, 64%, 65%);
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type="range"]::-moz-range-thumb {
+  border: 1px solid hsl(357, 64%, 65%);
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: hsl(357, 64%, 65%);
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+
+  background: #e4e4e4;
+  border-radius: 1.3px;
+  border: 0.2px solid #e4e4e4;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #e4e4e4;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+
+  background: #e4e4e4;
+  border-radius: 5px;
+  border: 0.2px solid #e4e4e4;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+footer a {
+  color: inherit;
+  background: linear-gradient(hsl(357, 64%, 65%), hsl(357, 64%, 65%));
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 4px 4px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+footer a:hover,
+footer a:focus {
+  background-size: 100px 100px;
+  color: white;
+}
+
+p {
+  margin-top: 1em;
+}
