@@ -99,12 +99,13 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-  border-top: 3px solid hsl(357, 64%, 65%);
+  border-top: 4px solid hsl(357, 64%, 65%);
 }
 
 hr {
-  border: 1px transparent;
-  margin: 5em;
+  border: 3px dashed hsl(0, 0%, 79%);
+  margin: 4em 1em;
+  border-radius: 10px;
 }
 
 #tipOutput {
@@ -115,6 +116,10 @@ hr {
 #newBill {
   color: hsl(212, 100%, 50%);
   font-weight: 700;
+}
+
+input[type="range"] {
+  width: 50%;
 }
 
 input[type="range"]::-webkit-slider-thumb {
