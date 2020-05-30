@@ -1,46 +1,45 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="zh">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Calculatrice à pourboires</title>
+    <title>小费计算机</title>
   </head>
-  <body>
+
+  <body class="CN">
     <div class="flex">
-      <a class="lang-toggle CN-toggle" href="./cn.html">中文</a>
+      <a class="lang-toggle" href="./index.html">Français</a>
     </div>
     <div class="circle"></div>
     <main class="container" id="container">
-      <h1 class="title">Calculatrice à pourboires</h1>
+      <h1 class="title">小费计算机</h1>
 
       <div>
-        <label for="billTotal">Montant à payer :</label>
+        <label for="billTotal"> 账单数额：</label>
         <input id="billTotal" type="text" /> €
       </div>
       <div class="">
-        <label for="tipInput">Pourboire :</label>
+        <label for="tipInput">小费：</label>
         <input type="range" value="0" id="tipInput" />
         <span id="tipOutput">0 %</span>
       </div>
       <div class="">
         <label for="splitInput"
-          >Addition partagée entre <span id="splitOutput">0</span>
-          <span id="people">personnes</span>.
+          ><span id="splitOutput">0</span> 个人分单。
         </label>
         <input type="range" min="1" max="10" value="1" id="splitInput" />
       </div>
       <hr />
       <div class="">
-        <label for="newBill">Montant à payer (par personne): </label>
+        <label for="newBill">人均数额: </label>
         <span id="newBill">0</span>
         <div class="">
-          <label for="tipPerP">Pourboire (par personne) : </label
-          ><span id="tipPerP">0</span>
+          <label for="tipPerP">人均数额: </label><span id="tipPerP">0</span>
         </div>
       </div>
     </main>
